@@ -192,14 +192,14 @@ nav {
   background-color: #5011cc;
   color: #edf2f7;
 }
-.menu_links{
+.menu_links {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
 }
-.menu_list_item{
+.menu_list_item {
   padding: 0 0 4px;
   margin: 8px 0;
 }
@@ -262,9 +262,14 @@ nav {
   opacity: 0;
   visibility: hidden;
 }
+.menu_open .menu_backdrop {
+  visibility: visible;
+  opacity: 1;
+  animation: menu_slide_open 300ms;
+}
 @keyframes menu_slide_open {
   0% {
-    transform: translateX(100%);
+    transform: translateX(120%);
   }
   80% {
     transform: translateX(-10%);
@@ -273,10 +278,16 @@ nav {
     transform: translateX(0%);
   }
 }
-.menu_open .menu_backdrop {
-  visibility: visible;
-  opacity: 1;
-  animation: menu_slide_open 300ms;
+.menu_close .menu_backdrop {
+  animation: menu_slide_close 300ms;
+}
+@keyframes menu_slide_close {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
 }
 .menu_open {
   max-height: 100vh;
@@ -305,8 +316,9 @@ nav {
 
 /* landing */
 .landing_title {
-  font-size: 36px;
+  font-size: 48px;
   color: #1a202c;
+  font-weight: 700;
 }
 .landing_text {
   width: 40%;
@@ -341,6 +353,9 @@ nav {
   padding-bottom: 1.25rem;
   padding-right: 12rem;
   font-weight: 500;
+}
+.landing_input::placeholder {
+  color: #cbd6e2;
 }
 .landing_input:hover {
   --tw-border-opacity: 1;
@@ -839,6 +854,7 @@ footer {
   }
   .section_row {
     flex-direction: column;
+    align-items: center;
   }
   .landing_text {
     width: 100%;
@@ -846,6 +862,154 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  .landing_title {
+    font-size: 30px;
+  }
+  .landing_para {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .trusted_customers_para {
+    text-align: center;
+    font-size: 14px;
+  }
+  .trusted_customers_img {
+    padding: 0;
+    margin: 16px 0 0;
+  }
+  .landing_pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+  .landing_img {
+    width: 512px;
+    height: 368.39px;
+  }
+  .para_text_center {
+    font-size: 14px;
+    margin: 16px 0 0;
+  }
+  .service {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .service_title {
+    display: flex;
+  }
+  .service_para {
+    width: 254px;
+    height: 96px;
+  }
+  .service_para {
+    font-weight: 500;
+  }
+  .section_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img_section {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    width: 448px;
+  }
+  .text_half {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    margin: 64px 96px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section_sub_title {
+    text-align: center;
+  }
+  .section_title {
+    font-size: 36px;
+    margin: 16px 0 0;
+    text-align: center;
+    width: 100%;
+  }
+  .quality_work_para {
+    text-align: center;
+    font-size: 14px;
+  }
+  .learn_more_button {
+    padding: 0 auto;
+  }
+  .steps_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .steps_item_text {
+    text-align: center;
+    margin: 12px 0 0;
+  }
+  .values_para {
+    font-size: 14px;
+    text-align: center;
+  }
+  .values_list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 64px;
+  }
+  .values_item {
+    margin: 40px 0 0;
+    width: 320px;
+    text-align: center;
+  }
+  .values_item_text {
+    display: flex;
+    justify-content: center;
+  }
+  .prices_plans {
+    display: flex;
+    flex-direction: column;
+  }
+  .prices_plan {
+    width: 100%;
+    margin: 64px 0 0;
+    width: 384px;
+    height: 607.5px;
+  }
+  .buy_now {
+    width: 256px;
+  }
+  .get_started_row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .get_started_text{
+    text-align: center;
+  }
+  .button_half{
+    margin: 24px 0 0;
+    display: flex;
+  }
+  .get_started_button{
+    padding: 16px 32px;
+    width: 160.88px;
+    height: 58px;
+  }
+  .contact_us_button{
+    padding: 16px 32px;
+    width: 157.3px;
+    height: 58px;
+  }
+
 }
 @media (max-width: 639px) {
   * {
