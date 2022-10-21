@@ -295,8 +295,6 @@ nav {
 .menu_link:hover:after {
   opacity: 1;
 }
-.menu_link_account_login {
-}
 .menu_link_account_sign_up {
   font-size: 18px;
   margin: 8px;
