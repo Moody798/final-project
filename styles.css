@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: Inter, system-ui;
 }
-body {
+.padding {
   padding: 32px;
 }
 html {
@@ -405,7 +405,7 @@ nav {
 }
 
 /* features */
-.features_row{
+.features_row {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -753,7 +753,6 @@ footer {
   width: 100%;
   position: absolute;
   padding: 96px 32px;
-  margin: 0 -32px;
 }
 .footer_list {
   display: flex;
@@ -861,7 +860,7 @@ footer {
   .btn_menu {
     display: block;
   }
-  .section_row {
+  #landing .section_row {
     flex-direction: column;
     align-items: center;
   }
@@ -895,9 +894,81 @@ footer {
     width: 512px;
     height: 368.39px;
   }
+  .para_text_center{
+    font-size: 16px;
+  }
+  .service{
+    width: 50%;
+  }
+  .quality_work_para {
+    font-size: 16px;
+  }
+  .learn_more_button {
+    padding: 0 auto;
+  }
+  
+  .section_title {
+    font-size: 36px;
+  }
+  .steps_list{
+
+  }
+  .values_para {
+    font-size: 16px;
+  }
+  .values_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .prices_plans {
+    display: flex;
+    flex-direction: column;
+  }
+  .prices_plan {
+    width: 100%;
+    margin: 64px 0 0;
+    width: 384px;
+    height: 607.5px;
+  }
+  .buy_now {
+    width: 256px;
+  }
+  .get_started_row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .get_started_text {
+    text-align: center;
+  }
+  .button_half {
+    margin: 24px 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  .get_started_button {
+    padding: 16px 32px;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  .contact_us_button {
+    padding: 16px 32px;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .section_row {
+    flex-direction: column;
+    align-items: center;
+  }
   .para_text_center {
     font-size: 14px;
-    margin: 16px 0 0;
+    margin: 16px auto 0;
   }
   .service {
     width: 100%;
@@ -946,7 +1017,6 @@ footer {
     text-align: center;
   }
   .section_title {
-    font-size: 36px;
     margin: 16px 0 0;
     text-align: center;
     width: 100%;
@@ -954,9 +1024,6 @@ footer {
   .quality_work_para {
     text-align: center;
     font-size: 14px;
-  }
-  .learn_more_button {
-    padding: 0 auto;
   }
   .steps_item {
     display: flex;
@@ -985,46 +1052,6 @@ footer {
     display: flex;
     justify-content: center;
   }
-  .prices_plans {
-    display: flex;
-    flex-direction: column;
-  }
-  .prices_plan {
-    width: 100%;
-    margin: 64px 0 0;
-    width: 384px;
-    height: 607.5px;
-  }
-  .buy_now {
-    width: 256px;
-  }
-  .get_started_row {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .get_started_text {
-    text-align: center;
-  }
-  .button_half {
-    margin: 24px 0 0;
-    display: flex;
-    justify-content: center;
-  }
-  .get_started_button {
-    padding: 16px 32px;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-  }
-  .contact_us_button {
-    padding: 16px 32px;
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-  }
   .footer_list_item {
     width: calc(100% / 3);
     margin: 48px 0 0;
@@ -1041,6 +1068,13 @@ footer {
   }
 }
 @media (max-width: 639px) {
+  html,body{
+    width: 100%;
+    display: table;
+  }
+  footer{
+    overflow: hidden;
+  }
   .landing_email {
     display: flex;
     flex-direction: column;
